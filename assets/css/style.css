@@ -146,7 +146,7 @@ header nav img {
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    line-height: 1.3rem;
+    /* line-height: 1.3rem; */
 }
 
 .hero p {
@@ -162,9 +162,18 @@ header nav img {
     text-shadow: none;
 }
 
-.hero-note {
+.hero .hero-note {
     font-size: 0.9rem;
-    margin-top: 1rem;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    filter: saturate(50%);
 }
 
 .trust {
@@ -172,14 +181,20 @@ header nav img {
     text-align: center;
 }
 
+.trust h3 {
+    margin-bottom: 0.8rem;
+}
+
 .trust p {
     font-size: 1rem;
     color: var(--color-gray-dark);
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
 }
 
 .benefits {
     padding: 3rem 1.5rem;
-    background: var(--color-white);
+    background: var(--color-gray-light);
 }
 
 .benefits-grid {
@@ -205,8 +220,8 @@ header nav img {
 
 .comparison {
     padding: 3rem 1.5rem;
-    background: var(--color-gray-light);
     text-align: center;
+    background: var(--color-white);
 }
 
 .comparison h2 {
@@ -241,7 +256,7 @@ header nav img {
 
 .pricing {
     padding: 3rem 1.5rem;
-    background: var(--color-white);
+    background: var(--color-gray-light);
     text-align: center;
 }
 
