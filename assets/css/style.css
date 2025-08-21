@@ -219,27 +219,27 @@ header nav img {
 }
 
 .testimonial {
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .testimonial-img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .testimonial-quote {
+    font-size: 1rem;
     font-style: italic;
-    font-size: 1.1rem;
     color: #444;
-    max-width: 700px;
+    max-width: 90%;
     margin: 0 auto;
 }
 
-blockquote-footer {
+.testimonial-author {
     color: #888;
     font-size: 0.95rem;
     font-weight: 500;
