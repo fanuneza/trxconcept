@@ -18,6 +18,34 @@
     --font-base: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     --font-logo: 'Impact', sans-serif;
     --container-max: 1200px;
+    --fs-h1: clamp(2rem, 4vw, 2.75rem);
+    --fs-h2: clamp(1.6rem, 3vw, 2rem);
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    --fs-small: 0.9rem;
+    --space-section: clamp(2rem, 5vw, 4rem);
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+p {
+    font-size: var(--fs-body);
+}
+
+small,
+.hero-note,
+.pricing-note {
+    font-size: var(--fs-small);
 }
 
 body {
@@ -27,12 +55,9 @@ body {
     line-height: 1.6;
 }
 
-/* 
-.container {
-    width: 90%;
-    max-width: var(--container-max);
-    margin: 0 auto;
-} */
+section {
+    padding-block: var(--space-section);
+}
 
 .site-header {
     background: var(--color-primary);
@@ -59,62 +84,58 @@ header nav img {
     color: var(--color-black);
 }
 
-/* 
-.nav-list {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.nav-list a {
-    text-decoration: none;
-    color: var(--color-black);
-    font-weight: 500;
-} */
-
 .btn {
     display: inline-block;
     border-radius: 999px;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
     text-align: center;
-    transition: background-color .3s ease, opacity .3s ease;
+    padding: .75rem 1.5rem;
+    transition: background-color .18s ease, transform .18s ease, box-shadow .18s ease;
 }
 
 .btn-trx {
     background: var(--color-primary);
     color: var(--color-black);
-    padding: 1rem 2rem;
 }
 
-.btn-trx:hover {
-    background: var(--color-primary);
-    color: var(--color-black);
-    opacity: .9 !important;
-}
-
-.btn-whatsapp {
-    background: var(--color-black);
-    color: var(--color-white);
-    padding: 0.75rem 1.25rem;
-}
-
-.btn-whatsapp:hover {
-    background: var(--color-black);
-    color: var(--color-white);
-    opacity: .9 !important;
-}
-
+.btn-whatsapp,
 .btn-invert {
     background: var(--color-black);
     color: var(--color-white);
-    padding: 1rem 2rem;
 }
 
-.btn-invert:hover {
-    background: var(--color-black);
+.btn-trx:hover {
+    background: color-mix(in srgb, var(--color-primary), #000 10%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+}
+
+.btn-invert:hover,
+.btn-whatsapp:hover {
+    background: #111;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+}
+
+.btn:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+.btn.btn-whatsapp,
+.btn.btn-invert {
     color: var(--color-white);
-    opacity: .9 !important;
+}
+
+.btn.btn-whatsapp:hover,
+.btn.btn-invert:hover {
+    color: var(--color-white) !important;
+}
+
+.btn.btn-trx,
+.btn.btn-trx:hover {
+    color: var(--color-black) !important;
 }
 
 .hero * {
@@ -146,7 +167,6 @@ header nav img {
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    /* line-height: 1.3rem; */
 }
 
 .hero p {
@@ -158,7 +178,16 @@ header nav img {
 .hero .btn {
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+.hero .btn-trx {
     color: var(--color-black);
+    text-shadow: none;
+}
+
+.hero .btn-invert,
+.hero .btn-whatsapp {
+    color: var(--color-white);
     text-shadow: none;
 }
 
@@ -173,7 +202,6 @@ header nav img {
     object-fit: cover;
     margin-bottom: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    filter: saturate(50%);
 }
 
 .trust {
@@ -193,7 +221,6 @@ header nav img {
 }
 
 .benefits {
-    padding: 3rem 1.5rem;
     background: var(--color-gray-light);
 }
 
@@ -232,17 +259,35 @@ header nav img {
 }
 
 .testimonial-quote {
-    font-size: 1rem;
+    position: relative;
+    line-height: 1.75;
     font-style: italic;
-    color: #444;
-    max-width: 90%;
-    margin: 0 auto;
+    color: var(--color-gray-dark);
+}
+
+.testimonial-quote::before {
+    content: "“";
+    position: absolute;
+    left: -0.5rem;
+    top: -0.5rem;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--color-primary);
+    opacity: .6;
 }
 
 .testimonial-author {
-    color: #888;
-    font-size: 0.95rem;
-    font-weight: 500;
+    margin-top: .75rem;
+    font-weight: 600;
+    color: var(--color-gray-dark);
+    font-style: normal;
+}
+
+.testimonial-img,
+.profile-pic {
+    aspect-ratio: 1/1;
+    display: block;
+    margin-inline: auto;
 }
 
 .comparison {
@@ -319,6 +364,29 @@ header nav img {
 .more-info {
     border-bottom: 1px dotted;
 }
+
+.footer .site-credit {
+    margin-top: .25rem;
+    font-size: .9rem;
+    color: var(--color-gray-dark);
+}
+
+.footer .site-credit a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted currentColor;
+}
+
+.footer .site-credit a:hover,
+.footer .site-credit a:focus {
+    opacity: .85;
+}
+
+.footer .site-credit a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
 
 @media screen and (width < 768px) {
 
