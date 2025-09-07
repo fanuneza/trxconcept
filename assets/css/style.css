@@ -1,419 +1,445 @@
-@import url('https://fonts.cdnfonts.com/css/impact');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url("https://fonts.cdnfonts.com/css/impact");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --color-black: #000;
-    --color-white: #fff;
-    --color-gray-light: #f5f5f5;
-    --color-gray: #ededed;
-    --color-gray-dark: #444;
-    --color-gray-note: #a3a3a3;
-    --color-primary: #ffd700;
-    --font-base: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-    --font-logo: 'Impact', sans-serif;
-    --container-max: 1200px;
-    --fs-h1: clamp(2rem, 4vw, 2.75rem);
-    --fs-h2: clamp(1.6rem, 3vw, 2rem);
-    --fs-h3: 1.25rem;
-    --fs-body: 1rem;
-    --fs-small: 0.9rem;
-    --space-section: clamp(2rem, 5vw, 4rem);
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray-light: #f5f5f5;
+  --color-gray: #ededed;
+  --color-gray-dark: #444;
+  --color-gray-note: #a3a3a3;
+  --color-primary: #ffd700;
+  --font-base: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --font-logo: "Impact", sans-serif;
+  --container-max: 1200px;
+  --fs-h1: clamp(2rem, 4vw, 2.75rem);
+  --fs-h2: clamp(1.6rem, 3vw, 2rem);
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --fs-small: 0.9rem;
+  --space-section: clamp(2rem, 5vw, 4rem);
 }
 
 h1 {
-    font-size: var(--fs-h1);
+  font-size: var(--fs-h1);
 }
 
 h2 {
-    font-size: var(--fs-h2);
+  font-size: var(--fs-h2);
 }
 
 h3 {
-    font-size: var(--fs-h3);
+  font-size: var(--fs-h3);
 }
 
 p {
-    font-size: var(--fs-body);
+  font-size: var(--fs-body);
 }
 
 small,
 .hero-note,
 .pricing-note {
-    font-size: var(--fs-small);
+  font-size: var(--fs-small);
 }
 
 body {
-    font-family: var(--font-base);
-    color: var(--color-black);
-    background: var(--color-white);
-    line-height: 1.6;
+  font-family: var(--font-base);
+  color: var(--color-black);
+  background: var(--color-white);
+  line-height: 1.6;
 }
 
 section {
-    padding-block: var(--space-section);
+  padding-block: var(--space-section);
 }
 
 .site-header {
-    background: var(--color-primary);
+  background: var(--color-primary);
 }
 
 .header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
 }
 
 header nav img {
-    height: 5rem;
+  height: 5rem;
 }
 
 .logo {
-    font-family: var(--font-logo);
-    font-size: 3rem;
-    letter-spacing: 0.1rem;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--color-black);
+  font-family: var(--font-logo);
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-black);
 }
 
 .btn {
-    display: inline-block;
-    border-radius: 999px;
-    font-weight: 600;
-    text-decoration: none;
-    text-align: center;
-    padding: .75rem 1.5rem;
-    transition: background-color .18s ease, transform .18s ease, box-shadow .18s ease;
+  display: inline-block;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.18s ease, transform 0.18s ease,
+    box-shadow 0.18s ease;
 }
 
 .btn-trx {
-    background: var(--color-primary);
-    color: var(--color-black);
+  background: var(--color-primary);
+  color: var(--color-black);
 }
 
 .btn-whatsapp,
 .btn-invert {
-    background: var(--color-black);
-    color: var(--color-white);
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.btn-whatsapp,
+.btn-trx {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-trx .wa-icon {
+  background-color: var(--color-black);
 }
 
 .btn-trx:hover {
-    background: color-mix(in srgb, var(--color-primary), #000 10%);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+  background: color-mix(in srgb, var(--color-primary), #000 10%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
 .btn-invert:hover,
 .btn-whatsapp:hover {
-    background: #111;
-    transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+  background: #111;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
 .btn:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 2px;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
 }
 
 .btn.btn-whatsapp,
 .btn.btn-invert {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
 .btn.btn-whatsapp:hover,
 .btn.btn-invert:hover {
-    color: var(--color-white) !important;
+  color: var(--color-white) !important;
 }
 
 .btn.btn-trx,
 .btn.btn-trx:hover {
-    color: var(--color-black) !important;
+  color: var(--color-black) !important;
 }
 
 .hero * {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-    text-shadow:
-        0 2px 4px rgba(0, 0, 0, .6),
-        0 1px 1px rgba(0, 0, 0, .3);
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6), 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/assets/img/hero.webp);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    padding: 4rem 1.5rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(/assets/img/hero.webp);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 4rem 1.5rem;
 }
 
 .hero h1,
 .hero p {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .hero.container {
-    background-color: var(--color-gray-light);
+  background-color: var(--color-gray-light);
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .hero p {
-    font-size: 1.25rem;
-    max-width: 600px;
-    margin: 0 auto;
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .hero .btn {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .hero .btn-trx {
-    color: var(--color-black);
-    text-shadow: none;
+  color: var(--color-black);
+  text-shadow: none;
 }
 
 .hero .btn-invert,
 .hero .btn-whatsapp {
-    color: var(--color-white);
-    text-shadow: none;
+  color: var(--color-white);
+  text-shadow: none;
 }
 
 .hero .hero-note {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .profile-pic {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .trust {
-    padding: 2rem 1.5rem;
-    text-align: center;
+  padding: 2rem 1.5rem;
+  text-align: center;
 }
 
 .trust h3 {
-    margin-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
 }
 
 .trust p {
-    font-size: 1rem;
-    color: var(--color-gray-dark);
-    margin-top: 0.5rem;
-    margin-bottom: 0rem;
+  font-size: 1rem;
+  color: var(--color-gray-dark);
+  margin-top: 0.5rem;
+  margin-bottom: 0rem;
 }
 
 .benefits {
-    background: var(--color-gray-light);
+  background: var(--color-gray-light);
 }
 
 .benefits-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .benefit {
-    flex: 1 1 250px;
-    max-width: 300px;
+  flex: 1 1 250px;
+  max-width: 300px;
 }
 
 .benefit h3 {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .benefit p {
-    color: var(--color-gray-dark);
+  color: var(--color-gray-dark);
 }
 
 .testimonial {
-    max-width: 900px;
-    margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .testimonial-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .testimonial-quote {
-    position: relative;
-    line-height: 1.75;
-    font-style: italic;
-    color: var(--color-gray-dark);
+  position: relative;
+  line-height: 1.75;
+  font-style: italic;
+  color: var(--color-gray-dark);
 }
 
 .testimonial-quote::before {
-    content: "“";
-    position: absolute;
-    left: -0.5rem;
-    top: -0.5rem;
-    font-size: 3rem;
-    line-height: 1;
-    color: var(--color-primary);
-    opacity: .6;
+  content: "“";
+  position: absolute;
+  left: -0.5rem;
+  top: -0.5rem;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--color-primary);
+  opacity: 0.6;
 }
 
 .testimonial-author {
-    margin-top: .75rem;
-    font-weight: 600;
-    color: var(--color-gray-dark);
-    font-style: normal;
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: var(--color-gray-dark);
+  font-style: normal;
 }
 
 .testimonial-img,
 .profile-pic {
-    aspect-ratio: 1/1;
-    display: block;
-    margin-inline: auto;
+  aspect-ratio: 1/1;
+  display: block;
+  margin-inline: auto;
 }
 
 .comparison {
-    padding: 3rem 1.5rem;
-    text-align: center;
-    background: var(--color-white);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background: var(--color-white);
 }
 
 .comparison h2 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .comparison table {
-    width: 100%;
-    max-width: 900px;
-    margin: 2rem auto;
-    border-collapse: collapse;
-    table-layout: fixed;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .comparison th,
 .comparison td {
-    padding: 0.75rem;
+  padding: 0.75rem;
 }
 
 .comparison th {
-    background: var(--color-gray);
-    text-align: center;
+  background: var(--color-gray);
+  text-align: center;
 }
 
 .comparison td {
-    text-align: center;
+  text-align: center;
 }
 
 .comparison tbody tr td:first-child {
-    text-align: left;
+  text-align: left;
 }
 
 .pricing {
-    padding: 3rem 1.5rem;
-    background: var(--color-gray-light);
-    text-align: center;
+  padding: 3rem 1.5rem;
+  background: var(--color-gray-light);
+  text-align: center;
 }
 
 .pricing h2 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .pricing p {
-    color: var(--color-gray-dark);
-    margin-bottom: 0.5rem;
+  color: var(--color-gray-dark);
+  margin-bottom: 0.5rem;
 }
 
 .pricing-note {
-    color: var(--color-gray-note);
-    margin-top: 0.5rem;
+  color: var(--color-gray-note);
+  margin-top: 0.5rem;
 }
 
 .footer {
-    background: var(--color-primary);
-    padding: 2rem 1.5rem;
-    text-align: center;
+  background: var(--color-primary);
+  padding: 2rem 1.5rem;
+  text-align: center;
 }
 
 .footer h2 {
-    color: var(--color-black);
-    margin-bottom: 1rem;
+  color: var(--color-black);
+  margin-bottom: 1rem;
 }
 
 .copyright {
-    padding-top: 1em;
+  padding-top: 1em;
 }
 
 .more-info {
-    border-bottom: 1px dotted;
+  border-bottom: 1px dotted;
 }
 
 .footer .site-credit {
-    margin-top: .25rem;
-    font-size: .9rem;
-    color: var(--color-gray-dark);
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: var(--color-gray-dark);
 }
 
 .footer .site-credit a {
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 1px dotted currentColor;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
 }
 
 .footer .site-credit a:hover,
 .footer .site-credit a:focus {
-    opacity: .85;
+  opacity: 0.85;
 }
 
 .footer .site-credit a:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 2px;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
 }
 
-
 @media screen and (width < 768px) {
-
-    .logo {
-        font-size: 2.2rem;
-    }
-
+  .logo {
+    font-size: 2.2rem;
+  }
 }
 
 @media screen and (width < 576px) {
+  header nav img {
+    height: 6rem;
+  }
 
-    header nav img {
-        height: 6rem;
-    }
+  .logo {
+    display: none;
+  }
 
-    .logo {
-        display: none;
-    }
+  .comparison th,
+  .comparison td:first-child {
+    font-size: 0.8em;
+  }
 
-    .comparison th,
-    .comparison td:first-child {
-        font-size: 0.8em;
-    }
+  .comparison th,
+  .comparison td {
+    padding: 0.3rem;
+  }
+}
+.wa-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-color: currentColor;
+  vertical-align: middle;
+  -webkit-mask: url("../icons/wa.svg") no-repeat center / contain;
+  mask: url("../icons/wa.svg") no-repeat center / contain;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
 
-    .comparison th,
-    .comparison td {
-        padding: 0.3rem;
-    }
-
+header .wa-icon {
+  width: 16px;
+  height: 16px;
 }
